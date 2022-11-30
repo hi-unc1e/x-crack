@@ -26,15 +26,18 @@ package util_test
 
 import (
 	"x-crack/util"
+	"x-crack/vars"
 
 	"testing"
 )
 
-func TestGenerateTask(t *testing.T) {
-	ipList := "/tmp/iplist.txt"
-	userDic := "/tmp/user.dic"
-	passDic := "/tmp/pass.dic"
+var (
+	ipList  = vars.IpList
+	userDic = vars.UserDict
+	passDic = vars.PassDict
+)
 
+func TestGenerateTask(t *testing.T) {
 	users, _ := util.ReadUserDict(userDic)
 	passwords, _ := util.ReadPasswordDict(passDic)
 
@@ -42,10 +45,6 @@ func TestGenerateTask(t *testing.T) {
 }
 
 func TestDistributionTask(t *testing.T) {
-	ipList := "/tmp/iplist.txt"
-	userDic := "/tmp/user.dic"
-	passDic := "/tmp/pass.dic"
-
 	users, _ := util.ReadUserDict(userDic)
 	passwords, _ := util.ReadPasswordDict(passDic)
 
