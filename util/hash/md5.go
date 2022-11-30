@@ -30,7 +30,6 @@ import (
 	"io"
 )
 
-// md5 function
 func MD5(s string) (m string) {
 	h := md5.New()
 	io.WriteString(h, s)
