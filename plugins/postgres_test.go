@@ -34,5 +34,8 @@ import (
 
 func TestScanPostgres(t *testing.T) {
 	s := models.Service{Ip: vars.HOST, Port: 5432, Protocol: "postgres", Username: vars.USER, Password: vars.PASS}
-	t.Log(plugins.ScanPostgres(s))
+	_, r := plugins.ScanPostgres(s)
+	t.Log(r.Result)
+	rs := r.Service
+	t.Logf("%s://%s:%d\n%s/%s", rs.Protocol, rs.Ip, rs.Port, rs.Username, rs.Password)
 }

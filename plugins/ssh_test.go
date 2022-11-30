@@ -34,5 +34,8 @@ import (
 
 func TestScanSsh(t *testing.T) {
 	s := models.Service{Ip: vars.HOST, Port: 22, Username: vars.USER, Password: vars.PASS, Protocol: "ssh"}
-	t.Log(plugins.ScanSsh(s))
+	_, r := plugins.ScanSsh(s)
+	t.Log(r.Result)
+	rs := r.Service
+	t.Logf("%s://%s:%d\n%s/%s", rs.Protocol, rs.Ip, rs.Port, rs.Username, rs.Password)
 }
