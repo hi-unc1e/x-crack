@@ -33,6 +33,6 @@ import (
 )
 
 func TestScanSNMP(t *testing.T) {
-	s := models.Service{Ip: "127.0.0.1", Port: 161, Username: vars.USER, Password: vars.PASS, Protocol: "snmp"}
+	s := models.Service{Ip: vars.HOST, Port: 161, Username: vars.USER, Password: vars.PASS, Protocol: "snmp"}
 	t.Log(plugins.ScanSNMP(s))
 }

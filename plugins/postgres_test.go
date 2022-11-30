@@ -33,6 +33,6 @@ import (
 )
 
 func TestScanPostgres(t *testing.T) {
-	s := models.Service{Ip: "127.0.0.1", Port: 5432, Protocol: "postgres", Username: vars.USER, Password: vars.PASS}
+	s := models.Service{Ip: vars.HOST, Port: 5432, Protocol: "postgres", Username: vars.USER, Password: vars.PASS}
 	t.Log(plugins.ScanPostgres(s))
 }

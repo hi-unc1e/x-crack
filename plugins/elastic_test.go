@@ -33,6 +33,6 @@ import (
 )
 
 func TestScanElastic(t *testing.T) {
-	s := models.Service{Ip: "127.0.0.1", Port: 9200, Protocol: "elastic", Username: vars.USER, Password: vars.PASS}
+	s := models.Service{Ip: vars.HOST, Port: 9200, Protocol: "elastic", Username: vars.USER, Password: vars.PASS}
 	t.Log(plugins.ScanElastic(s))
 }

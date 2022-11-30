@@ -33,6 +33,6 @@ import (
 )
 
 func TestScanFtp(t *testing.T) {
-	s := models.Service{Ip: "127.0.0.1", Port: 21, Protocol: "ftp", Username: vars.USER, Password: vars.PASS}
+	s := models.Service{Ip: vars.HOST, Port: 21, Protocol: "ftp", Username: vars.USER, Password: vars.PASS}
 	t.Log(plugins.ScanFtp(s))
 }

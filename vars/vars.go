@@ -41,6 +41,7 @@ var (
 	UserDict = "/Users/dpdu/GolandProjects/x-crack/user.dic"
 	PassDict = "/Users/dpdu/GolandProjects/x-crack/pass.dic"
 
+	HOST = "127.0.0.1"
 	USER = "root"
 	PASS = "123456"
 
@@ -77,7 +78,7 @@ var (
 		"SNMP": true,
 	}
 
-	// 标记特定服务的特定用户是否破解成功，成功的话不再尝试破解该用户
+	// SuccessHash 标记特定服务的特定用户是否破解成功，成功的话不再尝试破解该用户
 	SuccessHash map[string]bool
 
 	SupportProtocols map[string]bool

@@ -33,6 +33,6 @@ import (
 )
 
 func TestScanSmb(t *testing.T) {
-	s := models.Service{Ip: "share.xsec.io", Port: 445, Protocol: "smb", Username: vars.USER, Password: vars.PASS}
+	s := models.Service{Ip: vars.HOST, Port: 445, Protocol: "smb", Username: vars.USER, Password: vars.PASS}
 	t.Log(plugins.ScanSmb(s))
 }

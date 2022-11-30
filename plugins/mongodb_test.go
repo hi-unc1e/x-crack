@@ -33,6 +33,6 @@ import (
 )
 
 func TestScanMongodb(t *testing.T) {
-	s := models.Service{Ip: "127.0.0.1", Port: 27017, Username: vars.USER, Password: vars.PASS}
+	s := models.Service{Ip: vars.HOST, Port: 27017, Username: vars.USER, Password: vars.PASS}
 	t.Log(plugins.ScanMongodb(s))
 }
