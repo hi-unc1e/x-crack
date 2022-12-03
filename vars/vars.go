@@ -34,6 +34,7 @@ import (
 	"time"
 )
 
+
 var (
 	IpList     = "/Users/dpdu/GolandProjects/x-crack/iplist.txt"
 	ResultFile = "/Users/dpdu/GolandProjects/x-crack/x_crack.txt"
@@ -54,6 +55,8 @@ var (
 
 	ProgressBar      *pb.ProgressBar
 	ProcessBarActive *pb.ProgressBar
+
+	TestBedIp = "127.0.0.1"
 )
 
 var (

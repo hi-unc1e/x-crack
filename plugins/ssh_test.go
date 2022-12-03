@@ -38,4 +38,5 @@ func TestScanSsh(t *testing.T) {
 	t.Log(r.Result)
 	rs := r.Service
 	t.Logf("%s://%s:%d\n%s/%s", rs.Protocol, rs.Ip, rs.Port, rs.Username, rs.Password)
+
 }
